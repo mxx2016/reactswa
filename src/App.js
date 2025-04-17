@@ -1,16 +1,16 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import SubPage from './SubPage';
 
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={MainPage} />
-        <Route path="/subpage" component={SubPage} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/subpage" element={<SubPage />} />
+      </Routes>
     </Router>
   );
 };
